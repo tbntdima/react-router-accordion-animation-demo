@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import AccordionRoute from './AccordionRoute';
 import AccortionLink from './AccordionLink';
 
@@ -7,13 +7,10 @@ import Home from './Home';
 import About from './About';
 import Contact from './Contact';
 
-import './App.css';
-
 
 class App extends Component {
 
   render() {
-    const currentPath = this.props.location.pathname;
     return (
       <div>
         <AccortionLink to="/home">Home</AccortionLink>
