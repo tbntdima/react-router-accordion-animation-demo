@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import AccordionRoute from './AccordionRoute';
 import AccortionLink from './AccordionLink';
 
@@ -12,18 +12,20 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <AccortionLink to="/home">Home</AccortionLink>
-        <AccordionRoute exact path="/home" component={Home}/>
+      <Router>
+        <div>
+          <AccortionLink to="/home">Home</AccortionLink>
+          <AccordionRoute exact path="/home" component={Home}/>
 
-        <AccortionLink to="/about">About</AccortionLink>
-        <AccordionRoute path="/about" component={About}/>
+          <AccortionLink to="/about">About</AccortionLink>
+          <AccordionRoute path="/about" component={About}/>
 
-        <AccortionLink to="/contact">Contact</AccortionLink>
-        <AccordionRoute path="/contact" component={Contact}/>
-      </div>
+          <AccortionLink to="/contact">Contact</AccortionLink>
+          <AccordionRoute path="/contact" component={Contact}/>
+        </div>
+      </Router>
     );
   }
 }
 
-export default withRouter(App);
+export default App;
