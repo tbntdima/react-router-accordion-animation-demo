@@ -4,6 +4,9 @@ import { CSSTransition } from 'react-transition-group';
 import AnimateHeight from 'react-animate-height';
 /* Bounce animation is dependent on animate.css library.
 Source: https://github.com/daneden/animate.css */
+import 'animate.css/source/_base.css';
+import 'animate.css/source/bouncing_entrances/bounceInDown.css';
+
 
 const AccordionRoute = ({component: Component, ...rest}) => {
   return (
