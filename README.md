@@ -58,7 +58,7 @@ After a lot of trials and fails, I've got a working solution. The key point is i
 ```
 I'll describe the logic of each level starting from Router.
 ```Route``` detects a url change, but does not immediately mount/unmount inner component.
-Instead it always renders ```CSSTransition``` component and the ```match``` prop there.<br>
+Instead it always renders ```CSSTransition``` component and passes the ```match``` prop there.<br>
 ```CSSTransition``` triggers enter/exit on ```in``` prop change and handles mounting/unmounting.
 
 ## Demo
