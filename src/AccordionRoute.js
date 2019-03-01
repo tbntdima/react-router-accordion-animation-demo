@@ -29,7 +29,6 @@ const AccordionRoute = ({component: Component, ...rest}) => {
             enterActive: 'animated bounceInDown',
           }}
           appear
-          unmountOnExit
         >
           <Component />
         </CSSTransition>
