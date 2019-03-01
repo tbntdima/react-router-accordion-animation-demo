@@ -19,10 +19,10 @@ class App extends Component {
         <AccortionLink to="/home">Home</AccortionLink>
         <AccordionRoute exact path="/home" component={Home}/>
 
-        <Link to={currentPath === '/about' ? '/' : '/about'}>About</Link>
+        <AccortionLink to="/about">About</AccortionLink>
         <AccordionRoute path="/about" component={About}/>
 
-        <Link to={currentPath === '/contact' ? '/' : '/contact'}>Contact</Link>
+        <AccortionLink to="/contact">Contact</AccortionLink>
         <AccordionRoute path="/contact" component={Contact}/>
       </div>
     );
