@@ -7,12 +7,11 @@ import AnimateHeight from 'react-animate-height';
 const AccordionRoute = ({component: Component, ...rest}) => {
   return (
     <Route {...rest} children={({match}) => (
-      <div>
-      </div>
       <AnimateHeight
       duration={ 300 }
       height={  match !== null ? 'auto' : 0 }
     >
+      <div style={{overflow: 'hidden'}}>
         <CSSTransition
           in={match !== null}
           timeout={{
@@ -30,6 +29,7 @@ const AccordionRoute = ({component: Component, ...rest}) => {
         >
           <Component />
         </CSSTransition>
+      </div>
       </AnimateHeight>
     )}
     >
