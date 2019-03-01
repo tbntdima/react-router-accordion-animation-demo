@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import AccordionRoute from './AccordionRoute';
+import AccortionLink from './AccordionLink';
 
 import Home from './Home';
 import About from './About';
@@ -12,19 +13,20 @@ import './App.css';
 class App extends Component {
 
   render() {
+    const currentPath = this.props.location.pathname;
     return (
       <div>
-        <Link to="/">Home</Link>
-        <AccordionRoute exact path="/" component={Home}/>
+        <AccortionLink to="/home">Home</AccortionLink>
+        <AccordionRoute exact path="/home" component={Home}/>
 
-        <Link to="/about">About</Link>
+        <Link to={currentPath === '/about' ? '/' : '/about'}>About</Link>
         <AccordionRoute path="/about" component={About}/>
 
-        <Link to="/contact">Contact</Link>
+        <Link to={currentPath === '/contact' ? '/' : '/contact'}>Contact</Link>
         <AccordionRoute path="/contact" component={Contact}/>
       </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);
