@@ -26,7 +26,7 @@ While my website I have layout like this:
 ```
 ## Solution
 After a lot of trials and fails, I've got a working solution. The key point is in Router documentation => Route render methods => [children](https://reacttraining.com/react-router/web/api/Route/children-func).
-```
+```jsx
 <Route {...rest} children={({match}) => (
   <AnimateHeight
     duration={ 300 }
